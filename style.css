@@ -1,5 +1,6 @@
 body{
-   background-color: gray;
+   font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-color: white;
 }
 header{align-items: center;
    justify-content: space-between;
@@ -110,26 +111,43 @@ header{align-items: center;
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
- .top-section{
-   align-items: center;
-   text-align: center;
-   width: 100%;
-   margin: 10px;
-   img{
-      border: 1px solid black;
-      box-sizing: border-box;
-     
-   }
- }
- .master{
-   justify-content: space-between;
-   display: flex;
- }
- .master-all{
-   height: 35px;
-   text-align: center;
-   
- }
+ /* Add this to your existing CSS */
+.master {
+  display: flex;
+  justify-content: space-between; /* Distribute images evenly */
+  align-items: center; /* Vertically center images */
+  gap: 10px; /* Add some spacing between images */
+}
+
+/* Style the "View All" button */
+.master-all {
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  }
+
+.master-all:hover {
+  background-color: #005689;
+}
+/* Adjust the .master container */
+.master {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Set a maximum width for the container */
+.top-section {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center horizontally */
+}
+
  .bond-love{
   display: flex;
   align-items: center;
@@ -147,4 +165,6 @@ header{align-items: center;
 .sit{
   display: inline-block;
   margin-right: 10px;
+  width: 100%;
+
 }
